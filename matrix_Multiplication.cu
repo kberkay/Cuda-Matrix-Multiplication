@@ -234,6 +234,10 @@ int main(void)
     {
         std::cout<<"Results are equal!"<<std::endl;
     }
+    else
+    {
+        std::cout<<"Results are NOT equal!"<<std::endl;
+    }
 
     // Cleanup
     free(Left_Vector_h);
