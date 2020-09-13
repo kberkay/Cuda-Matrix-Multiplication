@@ -220,17 +220,17 @@ int main(void)
     print_matrices(Res_h,"GPU_out",Left_matrix_x,Right_matrix_y,dim);
     print_matrices(CPU,"CPU_out",Left_matrix_x,Right_matrix_y,dim);
 
-    bool eqaul = true;
-    for (int i=0;i< Left_matrix_x && eqaul;i++){
-        for (int j = 0; j < Right_matrix_y && eqaul; j++) {
+    bool equal = true;
+    for (int i=0;i< Left_matrix_x && equal;i++){
+        for (int j = 0; j < Right_matrix_y && equal; j++) {
             if (abs(Res_h[i*dim+j]-CPU[i*dim+j]) > 0.001)
             {
-                eqaul = false;
+                equal = false;
                 printf("NOT EQUAL\n");
             }
         }
     }
-    if (eqaul)
+    if (equal)
     {
         std::cout<<"Results are equal!"<<std::endl;
     }
